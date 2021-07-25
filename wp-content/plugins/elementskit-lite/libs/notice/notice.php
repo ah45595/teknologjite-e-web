@@ -448,7 +448,7 @@ class Notice{
                 }
 
                 .wpmet-notice .notice-logo{
-                    padding: .8rem;
+                    padding: 3px;
                     max-width: 110px;
                     max-height: 110px;
                 }

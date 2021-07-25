@@ -567,6 +567,18 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 		);
 
 		$this->add_control(
+			'ekit_testimonial_loop',
+			[
+				'label' => esc_html__( 'Enable Loop?', 'elementskit-lite' ),
+				'type' =>   Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'elementskit-lite' ),
+				'label_off' => esc_html__( 'No', 'elementskit-lite' ),
+				'return_value' => 'yes',
+				'default' => '',
+			]
+        );
+
+		$this->add_control(
             'ekit_testimonial_pause_on_hover',
             [
                 'label' => esc_html__( 'Pause on Hover', 'elementskit-lite' ),
@@ -2195,6 +2207,7 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
 			'speed'				=> $ekit_testimonial_speed ? $ekit_testimonial_speed : 1000,
 			'slidesPerGroup'	=> (int) $slides_to_scroll_count,
 			'slidesPerView'		=> (int) $slides_to_show_count,
+			'loop'				=> ( !empty($ekit_testimonial_loop) && $ekit_testimonial_loop == 'yes' ) ? true : false,
 			'breakpoints'		=> [
                 320 => [
                     'slidesPerView'      => !empty($settings['ekit_testimonial_slidetoshow_mobile']['size']) ? $settings['ekit_testimonial_slidetoshow_mobile']['size'] : 1,
@@ -2206,7 +2219,7 @@ class ElementsKit_Widget_Testimonial extends Widget_Base {
                 ],
                 1024 => [
                     'slidesPerView'      =>  $slides_to_show_count,
-                    'slidesPerGroup'    =>  $slides_to_show_count,
+                    'slidesPerGroup'    =>  $slides_to_scroll_count,
                 ]
             ],
 		];

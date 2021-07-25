@@ -3,7 +3,7 @@ Contributors: Ataurr, wpmet, emranio, easin55474, enamulhoquemohon
 Tags: elementor addons, mega menu, header footer builder, elements, elementor extensions, elementor modules, page builder addons, elementor addon, elementor widget, addons
 Requires at least: 5.0
 Tested up to: 5.7
-Stable tag: 2.3.3
+Stable tag: 2.3.4
 Requires PHP: 7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -347,7 +347,10 @@ Our Hotspot Widget for Elementor page builder offers lots of styles including: H
 - Widgets area
 
 == Changelog ==
-Version: 2.3.1 (15-07-2021)
+Version: 2.3.4 (19-07-2021)
+Fix: Swiper Slider conflict issues fixed with other theme.
+
+Version: 2.3.3 (15-07-2021)
 Fix: In swiperJS slider not working issue.
 
 Version: 2.3.2 (14-07-2021)
